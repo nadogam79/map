@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b372b6bf0a9993bdca716c6e30709b63 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b372b6bf0a9993bdca716c6e30709b63" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b372b6bf0a9993bdca716c6e30709b63 = L.map(
+                "map_b372b6bf0a9993bdca716c6e30709b63",
+                {
+                    center: [37.5845655, 127.027361],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e182cb2fd753c7df639bc923040b3ae8 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_b372b6bf0a9993bdca716c6e30709b63);
+        
+    
+            var marker_cluster_6cc4f13d4b3850f74280ee17b609faa7 = L.markerClusterGroup(
+                {}
+            );
+            map_b372b6bf0a9993bdca716c6e30709b63.addLayer(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var marker_147c507617c35dde5587a036bb47759a = L.marker(
+                [37.585531, 127.0256826],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_09dbb9b40aca4d32740626ceb01ea86e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_147c507617c35dde5587a036bb47759a.setIcon(icon_09dbb9b40aca4d32740626ceb01ea86e);
+        
+    
+        var popup_544e71d9815395721a2fa51b90d3f703 = L.popup({"maxWidth": 400});
+
+        
+            
+                var i_frame_d718153e741924eabf1391c47c03d9c4 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgICAgIDxhIGhyZWY9J2h0dHBzOi8vaWZoLmNjL2cvc0c2TjRWLmpwZycgdGFyZ2V0PSdfYmxhbmsnPjxpbWcgc3JjPSdodHRwczovL2lmaC5jYy9nL3NHNk40Vi5qcGcnIGJvcmRlcj0nMCcgd2lkdGg9JzM5MCcgaGVpZ2h0PSczOTAnPjwvYT4KICAgICAgICA=" width="410" style="border:none !important;" height="410"></iframe>`)[0];
+                popup_544e71d9815395721a2fa51b90d3f703.setContent(i_frame_d718153e741924eabf1391c47c03d9c4);
+            
+        
+
+        marker_147c507617c35dde5587a036bb47759a.bindPopup(popup_544e71d9815395721a2fa51b90d3f703)
+        ;
+
+        
+    
+    
+            var marker_1a33b84c66fe78b1aeab713d29e09a0f = L.marker(
+                [37.5858142, 127.0251965],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_3fe4eca6655415a3bb4481ce04f01245 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_1a33b84c66fe78b1aeab713d29e09a0f.setIcon(icon_3fe4eca6655415a3bb4481ce04f01245);
+        
+    
+        var popup_f1f19c1840d236ef5e94b81a7d1862ac = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0145949cf3632b47ec96f1f26dd9e390 = $(`<div id="html_0145949cf3632b47ec96f1f26dd9e390" style="width: 100.0%; height: 100.0%;">하나과학관 A,B </div>`)[0];
+                popup_f1f19c1840d236ef5e94b81a7d1862ac.setContent(html_0145949cf3632b47ec96f1f26dd9e390);
+            
+        
+
+        marker_1a33b84c66fe78b1aeab713d29e09a0f.bindPopup(popup_f1f19c1840d236ef5e94b81a7d1862ac)
+        ;
+
+        
+    
+    
+            var marker_eb05961516ba18251d45d710f7e5ddc8 = L.marker(
+                [37.5851986, 127.0254419],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_737b6c1b92d2b19ea13a8563af57c857 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_eb05961516ba18251d45d710f7e5ddc8.setIcon(icon_737b6c1b92d2b19ea13a8563af57c857);
+        
+    
+        var popup_287d0ec6be620ae2b1b12cccc52ef7a9 = L.popup({"maxWidth": 400});
+
+        
+            
+                var i_frame_3bd01c37116b5167ef1d0bc0af45c0e3 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgICAgIDxhIGhyZWY9J2h0dHBzOi8vaWZoLmNjL2cvWTczSDg4LmpwZycgdGFyZ2V0PSdfYmxhbmsnPjxpbWcgc3JjPSdodHRwczovL2lmaC5jYy9nL1k3M0g4OC5qcGcnIGJvcmRlcj0nMCcgd2lkdGg9JzM5MCcgaGVpZ2h0PSczOTAnPjwvYT4KICAgICAgICA=" width="410" style="border:none !important;" height="410"></iframe>`)[0];
+                popup_287d0ec6be620ae2b1b12cccc52ef7a9.setContent(i_frame_3bd01c37116b5167ef1d0bc0af45c0e3);
+            
+        
+
+        marker_eb05961516ba18251d45d710f7e5ddc8.bindPopup(popup_287d0ec6be620ae2b1b12cccc52ef7a9)
+        ;
+
+        
+    
+    
+            var marker_3f1d2af8e0ff7edfb7646b51466741d2 = L.marker(
+                [37.5842767, 127.0244954],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_0a9ec24644cbe3d86220b368e67f978d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_3f1d2af8e0ff7edfb7646b51466741d2.setIcon(icon_0a9ec24644cbe3d86220b368e67f978d);
+        
+    
+        var popup_b7f11dcaad14e8ec8bf64da9212eabb7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6c6d43588adb9b6dac1177fb339b17c2 = $(`<div id="html_6c6d43588adb9b6dac1177fb339b17c2" style="width: 100.0%; height: 100.0%;">산학관</div>`)[0];
+                popup_b7f11dcaad14e8ec8bf64da9212eabb7.setContent(html_6c6d43588adb9b6dac1177fb339b17c2);
+            
+        
+
+        marker_3f1d2af8e0ff7edfb7646b51466741d2.bindPopup(popup_b7f11dcaad14e8ec8bf64da9212eabb7)
+        ;
+
+        
+    
+    
+            var marker_ed2ef6b8b4a085e72684d68e4f6d0ad7 = L.marker(
+                [37.5846572, 127.0265621],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_ee96770d36dfb4c96515202ae473352e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_ed2ef6b8b4a085e72684d68e4f6d0ad7.setIcon(icon_ee96770d36dfb4c96515202ae473352e);
+        
+    
+        var popup_a08ff2b9d366bb234fb2e9cfe36a71f5 = L.popup({"maxWidth": 400});
+
+        
+            
+                var i_frame_864c020f46f901d609cb501ecba1da71 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgICAgIDxhIGhyZWY9J2h0dHBzOi8vaWZoLmNjL2cvMUJuMWd6LmpwZycgdGFyZ2V0PSdfYmxhbmsnPjxpbWcgc3JjPSdodHRwczovL2lmaC5jYy9nLzFCbjFnei5qcGcnIGJvcmRlcj0nMCcgd2lkdGg9JzM5MCcgaGVpZ2h0PSczOTAnPjwvYT4KICAgICAgICA=" width="410" style="border:none !important;" height="410"></iframe>`)[0];
+                popup_a08ff2b9d366bb234fb2e9cfe36a71f5.setContent(i_frame_864c020f46f901d609cb501ecba1da71);
+            
+        
+
+        marker_ed2ef6b8b4a085e72684d68e4f6d0ad7.bindPopup(popup_a08ff2b9d366bb234fb2e9cfe36a71f5)
+        ;
+
+        
+    
+    
+            var marker_2a3dc4988d6d4a0fa7f28841e56cde7d = L.marker(
+                [37.5856543, 127.0262335],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_3d0c54543a612e49dba153397e5337ff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_2a3dc4988d6d4a0fa7f28841e56cde7d.setIcon(icon_3d0c54543a612e49dba153397e5337ff);
+        
+    
+        var popup_25fc98a3c5f638e8ac38ed0f9e6185d1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2768b4e699c0360894657694e9073f6c = $(`<div id="html_2768b4e699c0360894657694e9073f6c" style="width: 100.0%; height: 100.0%;">생명과학서관</div>`)[0];
+                popup_25fc98a3c5f638e8ac38ed0f9e6185d1.setContent(html_2768b4e699c0360894657694e9073f6c);
+            
+        
+
+        marker_2a3dc4988d6d4a0fa7f28841e56cde7d.bindPopup(popup_25fc98a3c5f638e8ac38ed0f9e6185d1)
+        ;
+
+        
+    
+    
+            var marker_5f2e79aa5aa70053e588df7c1a23276e = L.marker(
+                [37.5861118, 127.026611],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_1fee2468c09cb7e8a79f8612450b3ce6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_5f2e79aa5aa70053e588df7c1a23276e.setIcon(icon_1fee2468c09cb7e8a79f8612450b3ce6);
+        
+    
+        var popup_bf252cc6d22470fd8ff6d8acbfa5cbed = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_13ebb59775355874619b36378313b0b8 = $(`<div id="html_13ebb59775355874619b36378313b0b8" style="width: 100.0%; height: 100.0%;">CJ식품안전관</div>`)[0];
+                popup_bf252cc6d22470fd8ff6d8acbfa5cbed.setContent(html_13ebb59775355874619b36378313b0b8);
+            
+        
+
+        marker_5f2e79aa5aa70053e588df7c1a23276e.bindPopup(popup_bf252cc6d22470fd8ff6d8acbfa5cbed)
+        ;
+
+        
+    
+    
+            var marker_f8b351f9c1429433b081c6d79f79c89a = L.marker(
+                [37.5849832, 127.0260206],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_8f362bdab837e2de3da1048bf3e9ff3a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_f8b351f9c1429433b081c6d79f79c89a.setIcon(icon_8f362bdab837e2de3da1048bf3e9ff3a);
+        
+    
+        var popup_fcf099f881d3fe66cf3855b61fce244e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_543c6ea05a72dce8c00d0ed7800a5a22 = $(`<div id="html_543c6ea05a72dce8c00d0ed7800a5a22" style="width: 100.0%; height: 100.0%;">하나스퀘어 지하</div>`)[0];
+                popup_fcf099f881d3fe66cf3855b61fce244e.setContent(html_543c6ea05a72dce8c00d0ed7800a5a22);
+            
+        
+
+        marker_f8b351f9c1429433b081c6d79f79c89a.bindPopup(popup_fcf099f881d3fe66cf3855b61fce244e)
+        ;
+
+        
+    
+    
+            var marker_82f2b53bb848a1ba2e137196d403729c = L.marker(
+                [37.5845655, 127.027361],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_207c33d3cd80d56b29cb356ac98e58c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_82f2b53bb848a1ba2e137196d403729c.setIcon(icon_207c33d3cd80d56b29cb356ac98e58c3);
+        
+    
+        var popup_ff8f1bc2777c2e1889ad721759695335 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e698232a528b9f46cca6413e8bdf980d = $(`<div id="html_e698232a528b9f46cca6413e8bdf980d" style="width: 100.0%; height: 100.0%;">애기능생활관</div>`)[0];
+                popup_ff8f1bc2777c2e1889ad721759695335.setContent(html_e698232a528b9f46cca6413e8bdf980d);
+            
+        
+
+        marker_82f2b53bb848a1ba2e137196d403729c.bindPopup(popup_ff8f1bc2777c2e1889ad721759695335)
+        ;
+
+        
+    
+    
+            var marker_bcf57ba529887817fa207a7ed91f54fa = L.marker(
+                [37.5848695, 127.0281761],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_c506777dec0fa99eecb1ee5aa853f46f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_bcf57ba529887817fa207a7ed91f54fa.setIcon(icon_c506777dec0fa99eecb1ee5aa853f46f);
+        
+    
+        var popup_c780a0a7f01e0f77af49bb293d650941 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_63c92c62f5e4cc3cd84d1794c4741fa2 = $(`<div id="html_63c92c62f5e4cc3cd84d1794c4741fa2" style="width: 100.0%; height: 100.0%;">미래융합기술관</div>`)[0];
+                popup_c780a0a7f01e0f77af49bb293d650941.setContent(html_63c92c62f5e4cc3cd84d1794c4741fa2);
+            
+        
+
+        marker_bcf57ba529887817fa207a7ed91f54fa.bindPopup(popup_c780a0a7f01e0f77af49bb293d650941)
+        ;
+
+        
+    
+    
+            var marker_172c2db15ad0f1d736e7e4ce4393fc5b = L.marker(
+                [37.5856652, 127.028051],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_e4d1547ffc92ea2a6085d727b9336f92 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_172c2db15ad0f1d736e7e4ce4393fc5b.setIcon(icon_e4d1547ffc92ea2a6085d727b9336f92);
+        
+    
+        var popup_ba396ebfaeb9b5bc7ffa1aff493681a1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c1e674438bb76b439d033834c7c3cd9b = $(`<div id="html_c1e674438bb76b439d033834c7c3cd9b" style="width: 100.0%; height: 100.0%;">생명과학동관</div>`)[0];
+                popup_ba396ebfaeb9b5bc7ffa1aff493681a1.setContent(html_c1e674438bb76b439d033834c7c3cd9b);
+            
+        
+
+        marker_172c2db15ad0f1d736e7e4ce4393fc5b.bindPopup(popup_ba396ebfaeb9b5bc7ffa1aff493681a1)
+        ;
+
+        
+    
+    
+            var marker_54859d39b745e0a246a524e311a67f4f = L.marker(
+                [37.5839706, 127.027982],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_6d58e7a75d61ee3decf4c0873c286d2b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_54859d39b745e0a246a524e311a67f4f.setIcon(icon_6d58e7a75d61ee3decf4c0873c286d2b);
+        
+    
+        var popup_111dc0b7e5634c5282bd2cb26f9f74b6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4708a21c5223b46819320ffb09658bdc = $(`<div id="html_4708a21c5223b46819320ffb09658bdc" style="width: 100.0%; height: 100.0%;">이학별관</div>`)[0];
+                popup_111dc0b7e5634c5282bd2cb26f9f74b6.setContent(html_4708a21c5223b46819320ffb09658bdc);
+            
+        
+
+        marker_54859d39b745e0a246a524e311a67f4f.bindPopup(popup_111dc0b7e5634c5282bd2cb26f9f74b6)
+        ;
+
+        
+    
+    
+            var marker_2462474e709d5a3a0c19331a23d250d5 = L.marker(
+                [37.5838792, 127.0252075],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_cf9565638ef7897e3f6a456d2e20bdc3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_2462474e709d5a3a0c19331a23d250d5.setIcon(icon_cf9565638ef7897e3f6a456d2e20bdc3);
+        
+    
+        var popup_50c2706b432dd356588fa47760b401e8 = L.popup({"maxWidth": 400});
+
+        
+            
+                var i_frame_7243f3c109470c85e44cae3cb38022b6 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgICAgIDxhIGhyZWY9J2h0dHBzOi8vaWZoLmNjL2cvSHZtODZwLmpwZycgdGFyZ2V0PSdfYmxhbmsnPjxpbWcgc3JjPSdodHRwczovL2lmaC5jYy9nL0h2bTg2cC5qcGcnIGJvcmRlcj0nMCcgd2lkdGg9JzM5MCcgaGVpZ2h0PSczOTAnPjwvYT4KICAgICAgICA=" width="410" style="border:none !important;" height="410"></iframe>`)[0];
+                popup_50c2706b432dd356588fa47760b401e8.setContent(i_frame_7243f3c109470c85e44cae3cb38022b6);
+            
+        
+
+        marker_2462474e709d5a3a0c19331a23d250d5.bindPopup(popup_50c2706b432dd356588fa47760b401e8)
+        ;
+
+        
+    
+    
+            var marker_80780232b44f4c800952ba9e3090bcf4 = L.marker(
+                [37.5832684, 127.0254416],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_4b4ea6e83e1a7fdcca5c0d02207db24c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_80780232b44f4c800952ba9e3090bcf4.setIcon(icon_4b4ea6e83e1a7fdcca5c0d02207db24c);
+        
+    
+        var popup_602e75234dabfad892649cd8b135fa2d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f841dc3623947644eae54e98264fc343 = $(`<div id="html_f841dc3623947644eae54e98264fc343" style="width: 100.0%; height: 100.0%;">제2 실험관</div>`)[0];
+                popup_602e75234dabfad892649cd8b135fa2d.setContent(html_f841dc3623947644eae54e98264fc343);
+            
+        
+
+        marker_80780232b44f4c800952ba9e3090bcf4.bindPopup(popup_602e75234dabfad892649cd8b135fa2d)
+        ;
+
+        
+    
+    
+            var marker_fab10c552ec75eaecb3d5bd0df3ad40e = L.marker(
+                [37.5831369, 127.0260933],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_0aea83414ac86867e60773ce5f285516 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_fab10c552ec75eaecb3d5bd0df3ad40e.setIcon(icon_0aea83414ac86867e60773ce5f285516);
+        
+    
+        var popup_086f3358318f1b12634fb8212c25a6a1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c18ea70dd6443773ae8b5a2167a8af0a = $(`<div id="html_c18ea70dd6443773ae8b5a2167a8af0a" style="width: 100.0%; height: 100.0%;">창의관</div>`)[0];
+                popup_086f3358318f1b12634fb8212c25a6a1.setContent(html_c18ea70dd6443773ae8b5a2167a8af0a);
+            
+        
+
+        marker_fab10c552ec75eaecb3d5bd0df3ad40e.bindPopup(popup_086f3358318f1b12634fb8212c25a6a1)
+        ;
+
+        
+    
+    
+            var marker_c5da7452c0f5b62897f0043d65ae6118 = L.marker(
+                [37.5825829, 127.0262707],
+                {}
+            ).addTo(marker_cluster_6cc4f13d4b3850f74280ee17b609faa7);
+        
+    
+            var icon_69aa79c8a5e264cab355376868e29278 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_c5da7452c0f5b62897f0043d65ae6118.setIcon(icon_69aa79c8a5e264cab355376868e29278);
+        
+    
+        var popup_b81247dfad4408f6b738331f07bb2a2e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a0d24050f1b21794317093f74a3c4e3e = $(`<div id="html_a0d24050f1b21794317093f74a3c4e3e" style="width: 100.0%; height: 100.0%;">신공학관</div>`)[0];
+                popup_b81247dfad4408f6b738331f07bb2a2e.setContent(html_a0d24050f1b21794317093f74a3c4e3e);
+            
+        
+
+        marker_c5da7452c0f5b62897f0043d65ae6118.bindPopup(popup_b81247dfad4408f6b738331f07bb2a2e)
+        ;
+
+        
+    
+</script>
+</html>
